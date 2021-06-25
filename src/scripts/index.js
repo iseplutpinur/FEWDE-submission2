@@ -9,3 +9,11 @@ const app = new App({
   content: document.querySelector('#content'),
   hero: document.querySelector('#header-hero')
 })
+
+window.addEventListener('hashchange', () => {
+  app.renderPage()
+})
+
+window.addEventListener('load', () => {
+  app.renderPage()
+})
