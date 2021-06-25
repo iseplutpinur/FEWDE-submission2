@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #424242;
+}
+
+.logo a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+nav {
+    justify-content: stretch;
+    height: 50px;
+    background: rgb(3, 1, 19);
+    background: -moz-linear-gradient(90deg, rgba(3, 1, 19, 1) 0%, rgba(10, 4, 60, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(3, 1, 19, 1) 0%, rgba(10, 4, 60, 1) 100%);
+    background: linear-gradient(90deg, rgba(3, 1, 19, 1) 0%, rgba(10, 4, 60, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#030113", endColorstr="#0a043c", GradientType=1);
+}
+
+nav .container {
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fafafa;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+}
+
+nav .container ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: flex-end;
+}
+
+nav .container ul li {
+    padding: 0 5px;
+}
+
+nav .container ul li a {
+    color: #fafafa;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 15px 10px;
+    overflow: hidden;
+}
+
+nav .container ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #62737a;
+    transition: opacity 300ms, transform 0.3s;
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+}
+
+nav .container ul li a:focus::after, nav .container ul li a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-toggle {
+    font-size: 32px;
+    padding: 5px 10px;
+    display: none;
+    text-decoration: none;
+    color: #fafafa;
+}
+
+.skip-link {
+    position: absolute;
+    background-color: #f00;
+    color: #fafafa;
+    text-decoration: none;
+    padding: 15px;
+    border: 1px #fafafa;
+    top: -100px;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 50px;
+}
+
+.hero {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    width: 100%;
+    background-position: center;
+    color: #fafafa;
+}
+
+.hero-inner {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.hero-tagline {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 340;
+}
+
+main {
+    max-width: 1200px;
+    min-height: 100px;
+    margin: 0 auto;
+}
+
+#content {
+    padding: 32px;
+}
+
+.latest {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.latest h1 {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.list {
+    margin: 32px auto auto;
+    text-align: left;
+    display: grid;
+    grid-row-gap: 16px
+}
+
+.list-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.list-item:hover, .list-item:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.list-item-thumb {
+    max-height: 200px;
+    width: 100%;
+}
+
+.city {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #03506f;
+    padding: 10px;
+    color: #fafafa;
+    border-radius: 5px;
+}
+
+.list-item-content {
+    padding: 17px;
+}
+
+.list-item-rating {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 500
+}
+
+.list-item-rating-value {
+    color: red;
+}
+
+.list-item-title {
+    margin-top: 5px;
+    transition: 0.3s opacity
+}
+
+.list-item-title:hover {
+    opacity: 0.5
+}
+
+.list-item-title a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.list-item-desc {
+    margin-top: -30px;
+    font-size: 12px;
+    line-height: 1.5em
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #020024;
+    color: #fafafa;
+}
