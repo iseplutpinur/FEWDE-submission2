@@ -24,8 +24,18 @@ class App {
   async renderPage () {
     const url = UrlParser.parseActiveUrlWithCombiner()
     const page = routes[url]
+    this.setHero(url === '/' || url === '/home')
+
     this._content.innerHTML = await page.render()
     await page.afterRender()
+  }
+
+  setHero (set) {
+    if (set) {
+      this._hero.classList.remove('d-hide')
+    } else {
+      this._hero.classList.add('d-hide')
+    }
   }
 };
 
