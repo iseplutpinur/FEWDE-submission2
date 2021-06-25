@@ -1,3 +1,5 @@
+import sourceData from '../../globals/source'
+
 const Home = {
   async render () {
     return `
@@ -7,6 +9,7 @@ const Home = {
 
   async afterRender () {
     // Fungsi ini akan dipanggil setelah render()
+    const list = await sourceData.listResto()
   }
 }
 
