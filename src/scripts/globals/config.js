@@ -8,7 +8,8 @@ const CONFIG = {
   // CACHE_NAME: 'cari-makan-appsv1'
   DATABASE_NAME: 'cari-makan-apps',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'favorite'
+  OBJECT_STORE_NAME: 'favorite',
+  WEB_SOCKET_SERVER: 'wss://movies-feed.dicoding.dev'
 }
 
 export default CONFIG
