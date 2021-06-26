@@ -8,6 +8,6 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     // host: '10.20.30.166',
-    port: 2021
+    port: 1112
   }
 })

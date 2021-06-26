@@ -22,22 +22,22 @@ const restoDetailTemplate = (data) => {
   let listMinuman = ''
   let listReview = ''
 
-  data.categories.forEach((data) => {
+  data.restaurant.categories.forEach((data) => {
     listCategory += `
               <div class="tag">${data.name}</div>
           `
   })
-  data.menus.foods.forEach((data) => {
+  data.restaurant.menus.foods.forEach((data) => {
     listMakanan += `
               ${data.name},
           `
   })
-  data.menus.drinks.forEach((data) => {
+  data.restaurant.menus.drinks.forEach((data) => {
     listMinuman += `
               ${data.name},
           `
   })
-  data.customerReviews.forEach((data) => {
+  data.restaurant.customerReviews.forEach((data) => {
     listReview += `
           <div class="review-card">
               <p><b>${data.name}</b> - ${data.date}</p>
@@ -51,16 +51,16 @@ const restoDetailTemplate = (data) => {
         <h1>Detail Restaurant</h1>
         <div class="detail-content" id="detail">
             <div class="list-item">
-                <img class="list-item-thumb detail" src="${CONFIG.BASE_IMAGE_URL_MEDIUM + data.pictureId}" alt="${data.name}" title="${data.name}">
-                <div class="city">${data.city}</div>
+                <img class="list-item-thumb detail" src="${CONFIG.BASE_IMAGE_URL_MEDIUM + data.restaurant.pictureId}" alt="${data.restaurant.name}" title="${data.restaurant.name}">
+                <div class="city">${data.restaurant.city}</div>
                 <div class="list-item-content" style="text-align:left;">
                     <p class="list-item-rating">
                         Rating :
-                        <span class="list-item-rating-value">${data.rating}</span>
+                        <span class="list-item-rating-value">${data.restaurant.rating}</span>
                     </p>
-                    <h2>${data.name}</h2>
-                    <p class="alamat">${data.address}</p>
-                    <div class="list_item_desc_detail">${data.description}</div>
+                    <h2>${data.restaurant.name}</h2>
+                    <p class="alamat">${data.restaurant.address}</p>
+                    <div class="list_item_desc_detail">${data.restaurant.description}</div>
                     <br>
                     <h2>Restaurant Category</h2>
                     <p>${listCategory}</p>
@@ -81,21 +81,7 @@ const restoDetailTemplate = (data) => {
         `
 }
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
-     <i class="fa fa-heart-o" aria-hidden="true"></i>
-  </button>
-`
-
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
-    <i class="fa fa-heart" aria-hidden="true"></i>
-  </button>
-`
-
 export {
   restoItemTemplate,
-  restoDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate
+  restoDetailTemplate
 }
